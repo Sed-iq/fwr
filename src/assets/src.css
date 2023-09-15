@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "opensans-b";
+  src: url(OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: "opensans";
+  src: url(OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: roboto-medium;
+  src: url(Roboto-Medium.ttf);
+}
+body {
+  font-family: "opensans" !important;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.roboto {
+  font-family: roboto-medium;
+}
+.opensans {
+  font-family: "opensans";
+}
+.opensans-b {
+  font-family: "opensans-b";
+}
+#cutout::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  border-bottom: 4px solid #c9c9c9;
+  border-left: 4px solid #c9c9c9;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: 0;
+  transform: translateX(40%) rotateZ(45deg);
+  top: -25px;
+  background: #fff;
+}
+#cutout::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  border-top: 4px solid #c9c9c9;
+  border-right: 4px solid #c9c9c9;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  left: 0;
+
+  transform: translateX(-40%) rotateZ(45deg);
+  top: -25px;
+  background: #fff;
+}
