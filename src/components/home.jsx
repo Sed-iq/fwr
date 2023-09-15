@@ -4,21 +4,26 @@ import Nav from "./nav";
 import Video_bg from "./video_bg";
 import bg from "../assets/bk2.jpg";
 import line from "../assets/line2.png";
-import nigeria from "../assets/nigeria3.jpeg";
+import ghana from "../assets/nigeria3.jpeg";
 import ghana_flag from "../assets/ghana_flag.png";
+import nigeria_flag from "../assets/nigeria_flag.png";
+
 import gambia_flag from "../assets/gambia_flag.png";
 import gambia from "../assets/gambia.jpeg";
+import nigeria from "../assets/nigeria2.jpeg";
+import Footer from "./footer";
+import Photo_stack from "./photo_stack";
 export default () => {
   return (
-    <div>
+    <div className="">
       <Nav />
       <Video_bg />
       <Photo_swapsection /> {/* Photo swap section */}
       <div className="my-10 pt-[6em]">
-        <p className="sm:text-[50px] italic roboto text-center">
+        <p className="sm:text-[50px] text-3xl italic roboto text-center">
           CHOOSE YOUR DOMINION
         </p>
-        <div className="flex mt-5 justify-center items-center px-10 space-x-5">
+        <div className="flex sm:flex-row flex-col mt-5 justify-center items-center sm:px-10 sm:space-y-0 space-y-10 sm:space-x-5">
           <div className="flex flex-col">
             <div className="bg-white flex overflow-hidden  p-2 justify-center items-center w-[370px] h-[280px] rounded-lg">
               <img
@@ -28,14 +33,14 @@ export default () => {
             </div>
             <div className="flex h-[110px] items-center w-full justify-center space-x-5">
               <p className="text-6xl italic">Nigeria</p>
-              <img srcSet={ghana_flag} alt="" className="w-10" />
+              <img srcSet={nigeria_flag} alt="" className="w-10" />
             </div>
           </div>
 
           <div className="flex flex-col">
             <div className="bg-white flex overflow-hidden  p-2 justify-center items-center w-[370px] h-[280px] rounded-lg">
               <img
-                srcSet={nigeria}
+                srcSet={gambia}
                 className="w-full duration-300 hover:scale-125 hover:brightness-50 h-[99%] rounded-xl"
               />
             </div>
@@ -48,7 +53,7 @@ export default () => {
           <div className="flex flex-col">
             <div className="bg-white flex overflow-hidden  p-2 justify-center items-center w-[370px] h-[280px] rounded-lg">
               <img
-                srcSet={nigeria}
+                srcSet={ghana}
                 className="w-full duration-300 hover:scale-125 hover:brightness-50 h-[99%] rounded-xl"
               />
             </div>
@@ -59,6 +64,7 @@ export default () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
@@ -66,22 +72,24 @@ function Photo_swapsection() {
   return (
     <div
       style={{ background: `url(${bg})` }}
-      className="flex h-[380px] items-center bg-contain bg-no-repeat p-4 justify-center space-x-10 w-full"
+      className="flex sm:flex-row flex-col  sm:h-[380px] sm:items-center bg-contain bg-no-repeat sm:p-4 sm:justify-center sm:space-x-10 w-full"
     >
-      <div className="w-1/2 h-full"></div>
-      <div className="w-1/2 h-full flex items-center justify-center p-4 ">
-        <div className="flex flex-col h-[90%] space-y-5 items-center rounded-lg w-[100%] bg-[#000000ea]">
-          <div className="flex pt-10 justify-center">
-            <img srcSet={line} className="w-[70%]" />
+      <div className="sm:w-1/2 p-4 h-full">
+        <Photo_stack />
+      </div>
+      <div className="sm:w-1/2 h-full flex items-center justify-center p-4 ">
+        <div className="flex flex-col sm:m-0 sm:pb-0 pb-10 h-[90%] space-y-2 sm:space-y-5 items-center rounded-lg w-[100%] bg-[#000000ea]">
+          <div className="flex sm:pt-10 pt-4 justify-center">
+            <img srcSet={line} className=" w-[80%] sm:w-[70%]" />
           </div>
           <p
             style={{ fontFamily: "cursive" }}
-            className="text-4xl text-[#ad942e]"
+            className="sm:text-4xl text-2xl text-[#ad942e]"
           >
             Mission Statement
           </p>
-          <p className="text-center font-sans text-xl my-4 w-[80%]">
-            Intercultural Marriages <br /> are both rewarding and challenging.{" "}
+          <p className="text-center font-sans text-base sm:text-xl my-4 w-[80%]">
+            Intercultural Marriages <br /> are both rewarding and challenging.
             <br />
             Our mission is to encourage, support and guide our <br /> Foreign
             Wives.
