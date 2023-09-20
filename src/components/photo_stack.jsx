@@ -32,101 +32,101 @@ export default () => {
   }, []);
 
   return (
-    <div className=" relative flex sm:h-auto h-[250px] justify-center items-center">
+    <div className=" relative sm:overflow-x-visible sm:overflow-y-visible overflow-y-hidden overflow-x-hidden flex sm:h-auto h-[250px] justify-center items-center">
       <img
         srcSet={America}
         alt=""
-        className="absolute card rotate-[15deg] sm:top-0 top-6 z-[0] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[15deg] lg:top-0 md:top-10 top-6 z-[0] lg:w-[300px] w-[200px]"
       />
       <img
         srcSet={Australia}
         alt=""
-        className="absolute card rotate-[-15deg] sm:top-0 top-6 z-[1] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[-15deg] lg:top-0 md:top-10 top-6 z-[1] lg:w-[300px] w-[200px]"
       />
       <img
         srcSet={Cambodia}
         alt=""
-        className="absolute card rotate-[10deg] sm:top-0 top-6 z-[2] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[10deg] lg:top-0 md:top-10 top-6 z-[2] lg:w-[300px] w-[200px]"
       />
       <img
         srcSet={Denmark}
         alt=""
-        className="absolute card rotate-[-10deg] sm:top-0 top-6 z-[3] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[-10deg] lg:top-0 md:top-10 top-6 z-[3] lg:w-[300px] w-[200px]"
       />
       <img
         srcSet={Egypt}
         alt=""
-        className="absolute card rotate-[-5deg] sm:top-0 top-6 z-[4] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[-5deg] lg:top-0 md:top-10 top-6 z-[4] lg:w-[300px] w-[200px]"
       />
       <img
         srcSet={Finland}
         alt=""
-        className="absolute card rotate-[5deg] sm:top-0 top-6 z-[5] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[5deg] lg:top-0 md:top-10 top-6 z-[5] lg:w-[300px] w-[200px]"
       />{" "}
       <img
         srcSet={Gambia}
         alt=""
-        className="absolute card rotate-[10deg] sm:top-0 top-6 z-[6] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[10deg] lg:top-0 md:top-10 top-6 z-[6] lg:w-[300px] w-[200px]"
       />{" "}
       <img
         srcSet={Ghana}
         alt=""
-        className="absolute card rotate-[-15deg] sm:top-0 top-6 z-[7] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[-15deg] lg:top-0 md:top-10 top-6 z-[7] lg:w-[300px] w-[200px]"
       />{" "}
       <img
         srcSet={Haiti}
         alt=""
-        className="absolute card rotate-[20deg] sm:top-0 top-6 z-[8] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[20deg] lg:top-0 md:top-10 top-6 z-[8] lg:w-[300px] w-[200px]"
       />{" "}
       <img
         srcSet={Japan}
         alt=""
-        className="absolute card rotate-[-20deg] sm:top-0 top-6 z-[9] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[-20deg] lg:top-0 md:top-10 top-6 z-[9] lg:w-[300px] w-[200px]"
       />{" "}
       <img
         srcSet={Kenya}
         alt=""
-        className="absolute card rotate-[-15deg] sm:top-0 top-6 z-[10] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[-15deg] lg:top-0 md:top-10 top-6 z-[10] lg:w-[300px] w-[200px]"
       />{" "}
       <img
         srcSet={Korea}
         alt=""
-        className="absolute card rotate-[15deg] sm:top-0 top-6 z-[11] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[15deg] lg:top-0 md:top-10 top-6 z-[11] lg:w-[300px] w-[200px]"
       />{" "}
       <img
         srcSet={Mexico}
         alt=""
-        className="absolute card rotate-[-5deg] sm:top-0 top-6 z-[12] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[-5deg] lg:top-0 md:top-10 top-6 z-[12] lg:w-[300px] w-[200px]"
       />{" "}
       <img
         srcSet={Philippines}
         alt=""
-        className="absolute card rotate-[10deg] sm:top-0 top-6 z-[13] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[10deg] lg:top-0 md:top-10 top-6 z-[13] lg:w-[300px] w-[200px]"
       />{" "}
       <img
         srcSet={Rwanda}
         alt=""
-        className="absolute card rotate-[15deg] sm:top-0 top-6 z-[14] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[15deg] lg:top-0 md:top-10 top-6 z-[14] lg:w-[300px] w-[200px]"
       />{" "}
       <img
         srcSet={Scotland}
         alt=""
-        className="absolute card rotate-[-10deg] sm:top-0 top-6 z-[15] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[-10deg] lg:top-0 md:top-10 top-6 z-[15] lg:w-[300px] w-[200px]"
       />{" "}
       <img
         srcSet={Singapore}
         alt=""
-        className="absolute card rotate-[5deg] sm:top-0 top-6 z-[16] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[5deg] lg:top-0 md:top-10 top-6 z-[16] lg:w-[300px] w-[200px]"
       />{" "}
       <img
         srcSet={SouthAfrica}
         alt=""
-        className="absolute card rotate-[-5deg] sm:top-0 top-6 z-[17] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[-5deg] lg:top-0 md:top-10 top-6 z-[17] lg:w-[300px] w-[200px]"
       />
       <img
         srcSet={Sweden}
         alt=""
-        className="absolute card rotate-[-5deg] sm:top-0 top-6 z-[18] sm:w-[300px] w-[200px]"
+        className="absolute card rotate-[-5deg] lg:top-0 md:top-10 top-6 z-[18] lg:w-[300px] w-[200px]"
       />
     </div>
   );
