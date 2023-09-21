@@ -1,0 +1,25 @@
+.container1 {
+  background: url(./airport-escort.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.container2 {
+  background: url(./wedding_services.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.container3 {
+  background: url(./couple1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.large-services {
+  background: url(./pg_2_bk.jpg);
+  padding: 4em;
+}
+@media (min-width: 640px) {
+  .cards:nth-of-type(even) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}

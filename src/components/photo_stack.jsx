@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import $ from "jquery";
 import America from "../assets/reels/America.jpg";
 import Australia from "../assets/reels/Australia.jpg";
@@ -20,19 +20,24 @@ import Singapore from "../assets/reels/Singapore.jpg";
 import SouthAfrica from "../assets/reels/SouthAfrica.jpg";
 import Sweden from "../assets/reels/Sweden.jpg";
 export default () => {
+  window.getZIndex = function (e) {
+    var z = window.getComputedStyle(e).getPropertyValue("z-index");
+    if (isNaN(z)) return window.getZIndex(e.parentNode);
+    return z;
+  };
+  const [shuffle, setState] = useState(false);
   useEffect(() => {
-    window.getZIndex = function (e) {
-      var z = window.getComputedStyle(e).getPropertyValue("z-index");
-      if (isNaN(z)) return window.getZIndex(e.parentNode);
-      return z;
-    };
-    setTimeout(() => {
-      fxn();
-    }, 1000);
-  }, []);
-
+    const img = document.querySelectorAll("#stack img");
+    img.forEach((image) => {
+      $(image).on("load", () => setState(true));
+    });
+    if (shuffle == true) setTimeout(() => fxn(), 2500);
+  }, [shuffle]);
   return (
-    <div className=" relative sm:overflow-x-visible sm:overflow-y-visible overflow-y-hidden overflow-x-hidden flex sm:h-auto h-[250px] justify-center items-center">
+    <div
+      id="stack"
+      className=" relative sm:overflow-x-visible sm:overflow-y-visible overflow-y-hidden overflow-x-hidden flex sm:h-auto h-[250px] justify-center items-center"
+    >
       <img
         srcSet={America}
         alt=""
