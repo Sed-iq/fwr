@@ -14,62 +14,58 @@
   font-family: roboto-medium;
   src: url(Roboto-Medium.ttf);
 }
+@font-face {
+  font-family: alison-cursive;
+  src: url(Allison-Regular.ttf);
+}
 body {
   font-family: "opensans" !important;
   width: 100%;
   overflow-x: hidden;
 }
-
-.box:nth-child(1) {
-  background: url(./reels/Ghana.jpg);
-  background-position: center;
-  box-shadow: 2px 2px 10px black;
-  rotate: 0 20deg 0;
-  transform: translateX(-11em);
-  background-repeat: no-repeat;
-  background-size: contain;
+.cursive {
+  font-family: "alison-cursive";
 }
 
-.box:nth-child(2) {
-  background: url(./reels/Haiti.jpg);
-  background-position: center;
-  box-shadow: 2px 2px 10px black;
-  transform: rotateY(-30deg);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.box:nth-child(3) {
-  background: url(./reels/Ghana.jpg);
-  background-position: center;
-  box-shadow: 2px 2px 10px black;
-  transform: translateX(15em) rotateY(25deg);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.box:nth-child(4) {
-  background: url(./reels/Rwanda.jpg);
-  background-position: center;
-  box-shadow: 2px 2px 10px black;
-  transform: translateX(25em) rotateY(25deg);
-  background-repeat: no-repeat;
-  background-size: contain;
+@media (min-width: 640px) {
+  .box:nth-child(1) {
+    background: url(./reels/Ghana.jpg);
+    background-position: center;
+    box-shadow: 2px 2px 10px black;
+    transform: translateX(-10em) rotateY(-30deg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .box:nth-child(2) {
+    background: url(./reels/Haiti.jpg);
+    background-position: center;
+    box-shadow: 2px 2px 10px black;
+    transform: translateX(2em) rotateY(-30deg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .box:nth-child(3) {
+    background: url(./reels/Ghana.jpg);
+    background-position: center;
+    box-shadow: 2px 2px 10px black;
+    transform: translateX(14em) rotateY(25deg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .box:nth-child(4) {
+    background: url(./reels/Rwanda.jpg);
+    background-position: center;
+    box-shadow: 2px 2px 10px black;
+    transform: translateX(25em) rotateY(25deg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 .services {
   background-image: url(./feature_bg.jpeg);
   background-size: cover;
 }
-/* .box:nth-child(1) {
-  background: url(./reels/Ghana.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.box:nth-child(1) {
-  background: url(./reels/Ghana.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-} */
 
 .roboto {
   font-family: roboto-medium;

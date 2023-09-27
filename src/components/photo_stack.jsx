@@ -32,6 +32,7 @@ export default () => {
       $(image).on("load", () => setState(true));
     });
     if (shuffle == true) setTimeout(() => fxn(), 2500);
+    return () => setState(false);
   }, [shuffle]);
   return (
     <div

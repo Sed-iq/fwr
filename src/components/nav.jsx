@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
 import logo from "./../assets/logo.png";
-import $ from "jquery";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 export default () => {
   const [ico, setIco] = useState(false); // used to show if drop is activated
   return (
-    <div className="w-full sticky z-[100] top-0 flex items-center bg-black h-[100px]">
+    <div className="w-full sticky z-[100] top-0 flex items-center bg-black sm:h-[80px] h-[100px]">
       <div className="w-full relative flex items-center justify-between px-10 p-4">
         <div>
           <img alt="" srcSet={logo} className="w-[50px]" />
         </div>
         <div
           id="options"
-          className={`sm:relative sm:opacity-[1] opacity-[0] right-0 flex left-0 absolute sm:bg-transparent bg-black sm:w-auto w-full sm:top-auto top-[80px] items-center flex-col sm:justify-start sm:flex-row sm:space-x-7 text-base sm:flex text-[#f5df8a] sm:items-center`}
+          className={`sm:relative sm:opacity-[1] opacity-[0] sm:text-sm right-0 flex left-0 absolute sm:bg-transparent bg-black sm:w-auto w-full sm:top-auto top-[80px] items-center flex-col sm:justify-start sm:flex-row sm:space-x-7 text-base sm:flex text-[#f5df8a] sm:items-center`}
         >
           <p className="duration-200 cursor-pointer hover:border-[#f5df8a] border-b-2 py-[7px] border-transparent">
             HOME
@@ -33,10 +32,10 @@ export default () => {
             CONTACT US
           </p>
           <div className=" flex sm:p-0 py-4 space-x-9">
-            <button className="py-2 hover:border-transparent hover:bg-[#f5df8a] hover:text-black duration-200 px-7 border-2 text-sm sm:text-base border-[#f5df8a] rounded-lg">
+            <button className="py-2 hover:border-transparent hover:bg-[#f5df8a] hover:text-black duration-200 px-5 border-2 text-sm border-[#f5df8a] rounded-lg">
               Sign Up
             </button>
-            <button className="py-2 hover:border-transparent hover:bg-[#f5df8a] hover:text-black duration-200 px-7 border-2 text-sm sm:text-base border-[#f5df8a] rounded-lg">
+            <button className="py-2 hover:border-transparent hover:bg-[#f5df8a] hover:text-black duration-200 px-5 border-2 text-sm border-[#f5df8a] rounded-lg">
               Login
             </button>
           </div>

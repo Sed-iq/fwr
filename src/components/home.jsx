@@ -19,19 +19,18 @@ import { useEffect, useState } from "react";
 export default () => {
   const [load, setLoad] = useState(true);
   useEffect(() => {
-    window.addEventListener("load", () => {
-      $("#loader").fadeOut(300, () => setLoad(false));
-    });
-    return () => {
-      window.removeEventListener("load", () => {
-        console.log("done");
-      });
-    };
+    setTimeout(() => {
+      if (document) {
+        $("#loader").fadeOut(200, () => {
+          setLoad(false);
+        });
+      }
+    }, 1000);
   }, [load]);
   return load == true ? (
     <Loading />
   ) : (
-    <div className="min-h-full bg-black">
+    <div id="main" className="min-h-full bg-black">
       <Nav />
       <Video_bg />
       <Photo_swapsection /> {/* Photo swap section */}
