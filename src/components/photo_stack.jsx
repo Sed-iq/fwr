@@ -48,7 +48,7 @@ export default () => {
     Sweden,
   ];
 
-  if (loadedCount == images.length) console.log("d"); // Checks if all images loaded
+  if (loadedCount == images.length) fxn(); // Checks if all images loaded
 
   return (
     <div
@@ -56,7 +56,9 @@ export default () => {
       className=" relative sm:overflow-x-visible sm:overflow-y-visible overflow-y-hidden overflow-x-hidden flex sm:h-auto h-[250px] justify-center items-center"
     >
       {images.map((image, index) => {
-        return <Image key={index} src={image} i={index} setCount={setCount} />;
+        return (
+          <Image key={index} src={image} i={index + 1} setCount={setCount} />
+        );
       })}
     </div>
   );
@@ -123,7 +125,7 @@ function Image({ src, i, setCount }) {
         zIndex: `${i}`,
       }}
       srcSet={src}
-      alt=""
+      loading="eager"
       onLoad={onLoad}
       className={`absolute card lg:top-0 md:top-10 top-6 lg:w-[300px] w-[200px]`}
     />
