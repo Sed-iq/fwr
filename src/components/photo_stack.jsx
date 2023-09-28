@@ -51,7 +51,7 @@ export default () => {
   if (loadedCount >= images.length) {
     setTimeout(() => {
       fxn();
-    }, 1600); // Just to wait for extra before images fully load
+    }, 400); // Just to wait for extra before images fully load
   } // Checks if all images loaded
 
   return (
