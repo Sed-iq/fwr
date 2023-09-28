@@ -25,114 +25,39 @@ export default () => {
     if (isNaN(z)) return window.getZIndex(e.parentNode);
     return z;
   };
-  const [shuffle, setState] = useState(false);
-  useEffect(() => {
-    const img = document.querySelectorAll("#stack img");
-    img.forEach((image) => {
-      $(image).on("load", () => setState(true));
-    });
-    if (shuffle == true) setTimeout(() => fxn(), 2500);
-  }, [shuffle]);
+  const [loadedCount, setCount] = useState(0);
+  const images = [
+    America,
+    Australia,
+    Cambodia,
+    Denmark,
+    Egypt,
+    Finland,
+    Gambia,
+    Ghana,
+    Haiti,
+    Japan,
+    Kenya,
+    Korea,
+    Mexico,
+    Philippines,
+    Rwanda,
+    Scotland,
+    Singapore,
+    SouthAfrica,
+    Sweden,
+  ];
+
+  if (loadedCount == images.length) console.log("d"); // Checks if all images loaded
+
   return (
     <div
       id="stack"
       className=" relative sm:overflow-x-visible sm:overflow-y-visible overflow-y-hidden overflow-x-hidden flex sm:h-auto h-[250px] justify-center items-center"
     >
-      <img
-        srcSet={America}
-        alt=""
-        className="absolute card rotate-[15deg] lg:top-0 md:top-10 top-6 z-[0] lg:w-[300px] w-[200px]"
-      />
-      <img
-        srcSet={Australia}
-        alt=""
-        className="absolute card rotate-[-15deg] lg:top-0 md:top-10 top-6 z-[1] lg:w-[300px] w-[200px]"
-      />
-      <img
-        srcSet={Cambodia}
-        alt=""
-        className="absolute card rotate-[10deg] lg:top-0 md:top-10 top-6 z-[2] lg:w-[300px] w-[200px]"
-      />
-      <img
-        srcSet={Denmark}
-        alt=""
-        className="absolute card rotate-[-10deg] lg:top-0 md:top-10 top-6 z-[3] lg:w-[300px] w-[200px]"
-      />
-      <img
-        srcSet={Egypt}
-        alt=""
-        className="absolute card rotate-[-5deg] lg:top-0 md:top-10 top-6 z-[4] lg:w-[300px] w-[200px]"
-      />
-      <img
-        srcSet={Finland}
-        alt=""
-        className="absolute card rotate-[5deg] lg:top-0 md:top-10 top-6 z-[5] lg:w-[300px] w-[200px]"
-      />{" "}
-      <img
-        srcSet={Gambia}
-        alt=""
-        className="absolute card rotate-[10deg] lg:top-0 md:top-10 top-6 z-[6] lg:w-[300px] w-[200px]"
-      />{" "}
-      <img
-        srcSet={Ghana}
-        alt=""
-        className="absolute card rotate-[-15deg] lg:top-0 md:top-10 top-6 z-[7] lg:w-[300px] w-[200px]"
-      />{" "}
-      <img
-        srcSet={Haiti}
-        alt=""
-        className="absolute card rotate-[20deg] lg:top-0 md:top-10 top-6 z-[8] lg:w-[300px] w-[200px]"
-      />{" "}
-      <img
-        srcSet={Japan}
-        alt=""
-        className="absolute card rotate-[-20deg] lg:top-0 md:top-10 top-6 z-[9] lg:w-[300px] w-[200px]"
-      />{" "}
-      <img
-        srcSet={Kenya}
-        alt=""
-        className="absolute card rotate-[-15deg] lg:top-0 md:top-10 top-6 z-[10] lg:w-[300px] w-[200px]"
-      />{" "}
-      <img
-        srcSet={Korea}
-        alt=""
-        className="absolute card rotate-[15deg] lg:top-0 md:top-10 top-6 z-[11] lg:w-[300px] w-[200px]"
-      />{" "}
-      <img
-        srcSet={Mexico}
-        alt=""
-        className="absolute card rotate-[-5deg] lg:top-0 md:top-10 top-6 z-[12] lg:w-[300px] w-[200px]"
-      />{" "}
-      <img
-        srcSet={Philippines}
-        alt=""
-        className="absolute card rotate-[10deg] lg:top-0 md:top-10 top-6 z-[13] lg:w-[300px] w-[200px]"
-      />{" "}
-      <img
-        srcSet={Rwanda}
-        alt=""
-        className="absolute card rotate-[15deg] lg:top-0 md:top-10 top-6 z-[14] lg:w-[300px] w-[200px]"
-      />{" "}
-      <img
-        srcSet={Scotland}
-        alt=""
-        className="absolute card rotate-[-10deg] lg:top-0 md:top-10 top-6 z-[15] lg:w-[300px] w-[200px]"
-      />{" "}
-      <img
-        srcSet={Singapore}
-        alt=""
-        className="absolute card rotate-[5deg] lg:top-0 md:top-10 top-6 z-[16] lg:w-[300px] w-[200px]"
-      />{" "}
-      <img
-        srcSet={SouthAfrica}
-        alt=""
-        className="absolute card rotate-[-5deg] lg:top-0 md:top-10 top-6 z-[17] lg:w-[300px] w-[200px]"
-      />
-      <img
-        srcSet={Sweden}
-        alt=""
-        className="absolute card rotate-[-5deg] lg:top-0 md:top-10 top-6 z-[18] lg:w-[300px] w-[200px]"
-      />
+      {images.map((image, index) => {
+        return <Image key={index} src={image} i={index} setCount={setCount} />;
+      })}
     </div>
   );
 };
@@ -182,4 +107,25 @@ function shiftZUp(e, fxn, i) {
       }
     });
   });
+}
+function Image({ src, i, setCount }) {
+  var tilt;
+  if (Math.round(Math.random() * 1) == 0) tilt = -35;
+  else tilt = 35;
+  const rotate = `${Math.floor(tilt * Math.random())}deg`;
+  const onLoad = () => {
+    setCount(i);
+  };
+  return (
+    <img
+      style={{
+        rotate: rotate,
+        zIndex: `${i}`,
+      }}
+      srcSet={src}
+      alt=""
+      onLoad={onLoad}
+      className={`absolute card lg:top-0 md:top-10 top-6 lg:w-[300px] w-[200px]`}
+    />
+  );
 }

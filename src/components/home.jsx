@@ -15,21 +15,8 @@ import $ from "jquery";
 import Photo_stack from "./photo_stack";
 import { Link } from "react-router-dom";
 import Loading from "./loading";
-import { useEffect, useState } from "react";
 export default () => {
-  const [load, setLoad] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      if (document) {
-        $("#loader").fadeOut(200, () => {
-          setLoad(false);
-        });
-      }
-    }, 1000);
-  }, [load]);
-  return load == true ? (
-    <Loading />
-  ) : (
+  return (
     <div id="main" className="min-h-full bg-black">
       <Nav />
       <Video_bg />
