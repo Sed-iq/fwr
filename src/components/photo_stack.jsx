@@ -48,7 +48,11 @@ export default () => {
     Sweden,
   ];
 
-  if (loadedCount == images.length) fxn(); // Checks if all images loaded
+  if (loadedCount >= images.length) {
+    setTimeout(() => {
+      fxn();
+    }, 1600); // Just to wait for extra before images fully load
+  } // Checks if all images loaded
 
   return (
     <div
@@ -125,7 +129,6 @@ function Image({ src, i, setCount }) {
         zIndex: `${i}`,
       }}
       srcSet={src}
-      loading="eager"
       onLoad={onLoad}
       className={`absolute card lg:top-0 md:top-10 top-6 lg:w-[300px] w-[200px]`}
     />
